@@ -1,6 +1,7 @@
 <template>
   <header id="header">
-    <h1>{{title}}</h1>
+    <slot></slot>
+    <h1>{{ title }}</h1>
   </header>
 </template>
 
@@ -8,11 +9,11 @@
 export default {
   name: "Header",
   props: {
-      title:{
-          type:String,
-          default:"喵喵电影"
-      }
-  }
+    title: {
+      type: String,
+      default: "喵喵电影",
+    },
+  },
 };
 </script>
 
