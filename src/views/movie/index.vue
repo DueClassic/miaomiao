@@ -31,7 +31,7 @@
 <script>
 import Header from "@/components/Header";
 import TabBar from "@/components/TabBar";
-import { messageBox } from "@/components/JS";
+// import { messageBox } from "@/components/JS";
 
 export default {
   name: "movie",

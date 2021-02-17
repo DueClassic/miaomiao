@@ -3,20 +3,24 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-import axios from "axios";
-Vue.prototype.axios = axios;
+Vue.config.productionTip = false;
 
 Vue.filter("setWH", (url, arg) => {
   return url.replace(/w\.h/, arg);
 });
+
+import axios from "axios";
+Vue.prototype.axios = axios;
+
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+Vue.use(ElementUI);
 
 import Scroller from "@/components/Scroller";
 Vue.component("Scroller", Scroller);
 
 import Loading from "@/components/Loading";
 Vue.component("Loading", Loading);
-
-Vue.config.productionTip = false;
 
 new Vue({
   router,

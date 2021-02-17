@@ -2,7 +2,7 @@
   <div id="main">
     <Header title="我的喵喵" />
     <div id="content">
-      <Login/>
+      <router-view />
     </div>
     <TabBar />
   </div>
@@ -17,11 +17,13 @@ export default {
   components: {
     Header,
     TabBar,
-    Login
+    Login,
   },
 };
 </script>
 
 <style scoped>
-#content .login_body{  width:100%;}
+#content .login_body {
+  width: 100%;
+}
 </style>
